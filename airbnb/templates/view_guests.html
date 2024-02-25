@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ language }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Guests</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Guest Information</h1>
+        <table>
+            <tr>
+                <th>Full Name</th>
+                <th>Date of Birth</th>
+                <!-- Aggiungere qui altre intestazioni di colonna se necessario -->
+            </tr>
+            {% for guest in guests %}
+            <tr>
+                <td>{{ guest[1] }}</td>
+                <td>{{ guest[2] }}</td>
+                <!-- Aggiungere qui altri dati degli ospiti se necessario -->
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

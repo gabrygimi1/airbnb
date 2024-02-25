@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ language }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ 'Thank You' if language == 'english' else 'Grazie' }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>{{ 'Thank You!' if language == 'english' else 'Grazie!' }}</h2>
+        <p>{{ 'Your information has been submitted successfully.' if language == 'english' else 'Le tue informazioni sono state inviate con successo.' }}</p>
+        <p>{{ 'Number of Guests' if language == 'english' else 'Numero di Ospiti' }}: {{ num_guests }}</p>
+        <p>{{ 'Language' if language == 'english' else 'Lingua' }}: {{ language }}</p>
+    </div>
+</body>
+</html>
